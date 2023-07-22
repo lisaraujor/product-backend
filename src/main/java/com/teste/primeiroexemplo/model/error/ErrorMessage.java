@@ -1,24 +1,24 @@
 package com.teste.primeiroexemplo.model.error;
 
 public class ErrorMessage {
-    private String titulo;
+    private String title;
 
     private Integer status;
     
-    private String mensagem;
+    private String mensage;
 
-    public ErrorMessage(String titulo, Integer status, String mensagem) {
-        this.titulo = titulo;
+    public ErrorMessage(String title, Integer status, String mensage) {
+        this.title = title;
         this.status = status;
-        this.mensagem = mensagem;
+        this.mensage = mensage;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTile(String title) {
+        this.title = title;
     }
 
     public Integer getStatus() {
@@ -29,12 +29,12 @@ public class ErrorMessage {
         this.status = status;
     }
 
-    public String getMensagem() {
-        return mensagem;
+    public String getMensage() {
+        return mensage;
     }
 
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
+    public void setMensage(String mensage) {
+        this.mensage = mensage;
     }
 
     

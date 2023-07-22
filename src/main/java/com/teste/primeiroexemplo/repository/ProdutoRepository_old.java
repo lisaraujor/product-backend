@@ -4,81 +4,81 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import com.teste.primeiroexemplo.model.Produto;
-import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
-
 import org.springframework.stereotype.Repository;
+
+import com.teste.primeiroexemplo.model.Product;
+import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
 
 @Repository
 public class ProdutoRepository_old {
     
-    private ArrayList<Produto> produtos = new ArrayList<Produto>();
-    private Integer ultimoId = 0;
+    private ArrayList<Product> products = new ArrayList<Product>();
+    private Integer lastId = 0;
 
     /**
-     * Método para retornar uma lista de produtos
-     * @return lista de produtos
+     * Method to return product list
+     * @return products list
      */
-    public List<Produto> obterTodos(){
-        return produtos;
+    public List<Product> getAll(){
+        return products;
     }
 
     /**
-     * Método que retorna o produto encontrado pelo seu ID.
-     * @param id do produto que será localizado
-     * @return Retorna o produto caso seja encontrado
+     * Method to return product by id
+     * @param id product
+     * @return Return a product if found
      */
-    public Optional<Produto> obterPorId(Integer id){
-        return produtos
+    public Optional<Product> getById(Integer id){
+        return products
                 .stream()
-                .filter(produto -> produto.getId() == id)
+                .filter(product -> product.getId() == id)
                 .findFirst();
     }
 
     /**
-     * Método para adicionar produto na lista.
-     * @param produto que seá adicionado.
-     * @return Retorna produto que foi adicionado na lista.
+     * Method to add a product to list
+     * @param product that will be added
+     * @return Returns added product
      */
-    public Produto adicionar(Produto produto){
+    public Product addProduct(Product product){
         
-        ultimoId++;;
+        lastId++;;
 
-        produto.setId(ultimoId);
-        produtos.add(produto);
+        product.setId(lastId);
+        products.add(product);
 
-        return produto;
+        return product;
     }
 
     /**
-     * Método para deletar o produto com o ID passado
-     * @param id do produto a ser deletado.
+     * Method to delete the product with the ID passed
+     * @param id product
      */
-    public void deletar(Integer id){
-        produtos.removeIf(produto -> produto.getId() == id);
+    public void delete(Integer id){
+        products.removeIf(product -> product.getId() == id);
     }
 
     /**
-     * Método para atualizar produto na lista
-     * @param produto que será atualizado
-     * @return Retorna o produto atualizado na lista
+     * Method to update list
+     * @param product that will be updated
+     * @return Returns updated product in the list
      */
-    public Produto atualizar(Produto produto){
+    public Product update(Product product){
         
-        // Encontra o produto na lista
-        Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
+        // Find product in the list
+        Optional<Product> productFound = getById(product.getId());
 
-        if(produtoEncontrado.isEmpty()){
-            throw new ResourceNotFoundException("Produto não encontrado.");
+        if(productFound.isEmpty()){
+            throw new ResourceNotFoundException("Product not find.");
         }
         
-        // Remove produto antigo da lista
-        deletar(produto.getId());
+        // Remove old product from list
+        delete(product.getId());
 
-        // Adiciona novo produto atualizado na lista
-        produtos.add(produto);
+        // Add new updated product in list
+        products.add(product);
 
-        return produto;
+        return product;
 
     }
 }
