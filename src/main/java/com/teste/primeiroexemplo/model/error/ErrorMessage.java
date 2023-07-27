@@ -5,12 +5,12 @@ public class ErrorMessage {
 
     private Integer status;
     
-    private String mensage;
+    private String message;
 
-    public ErrorMessage(String title, Integer status, String mensage) {
+    public ErrorMessage(String title, Integer status, String message) {
         this.title = title;
         this.status = status;
-        this.mensage = mensage;
+        this.message = message;
     }
 
     public String getTitle() {
@@ -29,13 +29,11 @@ public class ErrorMessage {
         this.status = status;
     }
 
-    public String getMensage() {
-        return mensage;
+    public String getmessage() {
+        return message;
     }
 
-    public void setMensage(String mensage) {
-        this.mensage = mensage;
+    public void setmessage(String message) {
+        this.message = message;
     }
-
-    
 }

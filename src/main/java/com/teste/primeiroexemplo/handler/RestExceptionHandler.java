@@ -1,12 +1,12 @@
 package com.teste.primeiroexemplo.handler;
 
-import com.teste.primeiroexemplo.model.error.ErrorMessage;
-import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import com.teste.primeiroexemplo.model.error.ErrorMessage;
+import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
 
 @ControllerAdvice
 public class RestExceptionHandler {

@@ -7,8 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Product {
-    
-    //#region Atributos
+
     @Id // Set attribute as primary key
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
