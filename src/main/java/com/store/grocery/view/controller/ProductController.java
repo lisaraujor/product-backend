@@ -1,15 +1,15 @@
-package com.teste.primeiroexemplo.view.controller;
+package com.store.grocery.view.controller;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import com.teste.primeiroexemplo.model.Product;
-import com.teste.primeiroexemplo.services.ProductService;
-import com.teste.primeiroexemplo.shared.ProductDTO;
-import com.teste.primeiroexemplo.view.model.ProductRequest;
-import com.teste.primeiroexemplo.view.model.ProductResponse;
+import com.store.grocery.model.Product;
+import com.store.grocery.services.ProductService;
+import com.store.grocery.shared.ProductDTO;
+import com.store.grocery.view.model.ProductRequest;
+import com.store.grocery.view.model.ProductResponse;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

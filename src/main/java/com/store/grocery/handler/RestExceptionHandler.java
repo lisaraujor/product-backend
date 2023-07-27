@@ -1,7 +1,7 @@
-package com.teste.primeiroexemplo.handler;
+package com.store.grocery.handler;
 
-import com.teste.primeiroexemplo.model.error.ErrorMessage;
-import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
+import com.store.grocery.model.error.ErrorMessage;
+import com.store.grocery.model.exception.ResourceNotFoundException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.teste.primeiroexemplo.view.model;
+package com.store.grocery.view.model;
 
 public class ProductResponse {
     

@@ -1,8 +1,6 @@
-package com.teste.primeiroexemplo.shared;
+package com.store.grocery.view.model;
 
-public class ProductDTO {
-
-        private Integer id;
+public class ProductRequest {
     
         private String name;
     
@@ -11,13 +9,6 @@ public class ProductDTO {
         private Double value;
     
         private String obs;
-        
-        public Integer getId() {
-            return id;
-        }
-        public void setId(Integer id) {
-            this.id = id;
-        }
 
         public String getName() {
             return name;
@@ -45,5 +36,5 @@ public class ProductDTO {
         }
         public void setObs(String obs) {
             this.obs = obs;
-        }     
+        } 
 }

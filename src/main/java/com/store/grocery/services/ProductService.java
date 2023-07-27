@@ -1,4 +1,4 @@
-package com.teste.primeiroexemplo.services;
+package com.store.grocery.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,10 +10,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.teste.primeiroexemplo.model.Product;
-import com.teste.primeiroexemplo.model.exception.ResourceNotFoundException;
-import com.teste.primeiroexemplo.repository.ProductRepository;
-import com.teste.primeiroexemplo.shared.ProductDTO;
+import com.store.grocery.model.Product;
+import com.store.grocery.model.exception.ResourceNotFoundException;
+import com.store.grocery.repository.ProductRepository;
+import com.store.grocery.shared.ProductDTO;
 
 @Service
 public class ProductService {
